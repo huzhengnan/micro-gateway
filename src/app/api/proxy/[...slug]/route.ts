@@ -54,21 +54,21 @@ async function handleProxy(request: NextRequest, params: { slug: string[] }) {
 }
 
 // 支持所有 HTTP 方法
-export async function GET(request: NextRequest, { params }: { params: { slug: string[] } }) {
-  return handleProxy(request, params);
+export async function GET(request: NextRequest, context: any) {
+  return handleProxy(request, context.params);
 }
-export async function POST(request: NextRequest, { params }: { params: { slug: string[] } }) {
-  return handleProxy(request, params);
+export async function POST(request: NextRequest, context: any) {
+  return handleProxy(request, context.params);
 }
-export async function PUT(request: NextRequest, { params }: { params: { slug: string[] } }) {
-  return handleProxy(request, params);
+export async function PUT(request: NextRequest, context: any) {
+  return handleProxy(request, context.params);
 }
-export async function DELETE(request: NextRequest, { params }: { params: { slug: string[] } }) {
-  return handleProxy(request, params);
+export async function DELETE(request: NextRequest, context: any) {
+  return handleProxy(request, context.params);
 }
-export async function PATCH(request: NextRequest, { params }: { params: { slug: string[] } }) {
-  return handleProxy(request, params);
+export async function PATCH(request: NextRequest, context: any) {
+  return handleProxy(request, context.params);
 }
-export async function OPTIONS(request: NextRequest, { params }: { params: { slug: string[] } }) {
-  return handleProxy(request, params);
+export async function OPTIONS(request: NextRequest, context: any) {
+  return handleProxy(request, context.params);
 } 
